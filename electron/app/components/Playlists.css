@@ -1,14 +1,33 @@
 .container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
+    display: grid;
+    height: 100vh;
+    width: 100wh;
+    grid-template-columns: auto 9fr;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: "side header"
+        "side main"
+        "side footer";
 }
 
-.container h2 {
-  font-size: 5rem;
+.side{
+    grid-area: side;
+    overflow: auto;
+    width: 300px;
+    transition: all 1s;
+    background-color: #2b2f36;
+    
 }
 
-.container a {
-  font-size: 1.4rem;
+.header{
+    grid-area: header;
+    background-color: #373d49;
+}
+.main{
+    grid-area: main;
+    background-color: white;
+    color: black;
+}
+.footer{
+    grid-area: footer;
+    background-color: #373d49;
 }

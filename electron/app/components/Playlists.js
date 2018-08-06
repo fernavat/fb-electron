@@ -12,8 +12,15 @@ export default class Home extends Component<Props> {
     return (
       <div>
         <div className={styles.container} data-tid="container">
-          <h2>Playlists!</h2>
-          <Link to="/counter">to Counter</Link>
+            <div className={styles.header}>
+              <h3>FunBox!</h3>
+            </div>
+            <div className={styles.footer}>Footer</div>
+            <div className={styles.main}> Playlist!
+            </div>
+            <div className={styles.side}>
+              <video id="vplayer" width="100%" poster="./public/funbox.png"></video>
+            </div>
         </div>
       </div>
     );
